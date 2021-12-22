@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Libre+Baskerville:ital@1&display=swap');
+
+/* variables */
+:root {
+    --green: #357957;
+    --black: #222222;
+    --light-color: #666D6F;
+    --bg-color: #e6e6e6;
+    --border: .2rem solid rgba(34, 34, 34, 0.2);
+    --box-shadow: .4rem .4rem 1rem #ccc,
+                        -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset: .4rem .4rem 1rem #ccc inset,
+                        -.4rem -.4rem 1rem #fff inset;
+}
+
+* {
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Libre Baskerville', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    padding-left: 30rem;
+}
+
+/* scrol-btn */
+
+.scrol-btn-up {
+    position: fixed;
+    height: 45px;
+    width: 40px;
+    background: var(--green);
+    right: 30px;
+    bottom: 70px;
+    text-align: center;
+    line-height: 45px;
+    z-index: 9999;
+    font-size: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+  }
+  
+.scrol-btn-up a {
+  color: var(--black);
+}
+
+
+body.active {
+    --green: #357957;
+    --black: #fff;
+    --light-color: #ddd;
+    --bg-color: #222;
+    --border: .2rem solid rgba(53, 121, 87, 0.4);
+    --box-shadow: .4rem .4rem 1rem #111,
+                        -.4rem -.4rem 1rem #333;
+    --box-shadow-inset: .4rem .4rem 1rem #111 inset,
+                        -.4rem -.4rem 1rem #333 inset;
+}
+
+section {
+    /* min-height: 100vh; */
+    padding: 2rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3.5rem;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    background: none;
+    color: var(--black);
+    box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+    color: var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+
+/* Header Style */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: var(--bg-color);
+    width: 30rem;
+    border-right: var(--border);
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.header .user img {
+    margin: 1rem;
+    border: 1rem solid transparent;
+    border-radius: 50%;
+    height: 22rem;
+    width: 22rem;
+    box-shadow: var(--box-shadow);
+}
+
+.header .user h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.header .user p {
+    color: var(--green);
+    font-size: 1.5rem;
+}
+
+.header .navbar {
+    padding-top: 1rem;
+}
+
+.header .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+    padding: .7rem;
+    border-radius: 5rem;
+    font-size: 2rem;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+}
+
+.header .navbar a:hover {
+    box-shadow: var(--box-shadow-inset);
+    color: var(--green);
+}
+
+#menu-btn {
+    position: fixed;
+    top: 1rem;
+    left: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+    background: var(--bg-color);
+    display: none;
+}
+
+#menu-btn:hover {
+    color: var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+#theme-toogler {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    z-index: 1000;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+    background: var(--bg-color);
+}
+
+#theme-toogler:hover {
+    color: var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+
+/* Home Style */
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: var(--border);
+}
+
+.home .content h3 {
+    font-size: 7rem;
+    color: var(--black);
+    line-height: 1.1;
+}
+
+.home .content p {
+    font-size: 2rem;
+    color: var(--green);
+    padding-bottom: .5rem;
+}
+
+.home .share {
+    position: relative;
+    top: 5rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+}
+
+.home .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    box-shadow: var(--box-shadow);
+    margin: .5rem;
+    font-size: 2rem;
+    color: var(--black);
+    border-radius: .5rem;
+}
+
+.home .share a:hover {
+        box-shadow: var(--box-shadow-inset);
+        color: var(--green);
+} 
+
+.home .box-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home .box-container .box {
+    margin: 1.2rem;
+    padding: 1.8rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.home .box-container .box i{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: var(--green);
+}
+
+.home .box-container .box h3{
+    font-size: 2rem;
+    padding-bottom: 1.3rem;
+    color: var(--black);
+}
+
+.home .box-container .box p{
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--light-color);
+}
+
+/* about style */
+.heading {
+    text-align: center;
+    font-size: 5rem;
+    color: var(--black);
+    padding-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--green);
+}
+
+.about {
+    min-height: 80vh; 
+    border-bottom: var(--border);
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about .row .conten h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    line-height: 1.8;
+}
+
+.about .row .conten h3 span{
+    color: var(--green);
+}
+
+.about .row .conten p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.about .row:nth-child(3) {
+    padding-top: 4rem;
+}
+
+.about .row .progress {
+    flex:  1 1 40rem;
+    margin: 2rem;
+}
+
+.about .row .progress h3 {
+    font-size: 2rem;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .row .progress .bar{
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+    height: 2rem;
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+.about .row .progress .bar span{
+    display: block;
+    height: 100%;
+    background: var(--green);
+    border-radius: 5rem;
+}
+
+.about .row .progress .bar-1-1 span{
+    width: 100%;
+}
+
+.about .row .progress .bar-1-2 span{
+    width: 70%;
+}
+
+.about .row .progress .bar-1-3 span{
+    width: 70%;
+}
+
+.about .row .progress .bar-2-1 span{
+    width: 50%;
+}
+
+.about .row .progress .bar-2-2 span{
+    width: 40%;
+}
+
+.about .row .progress .bar-2-3 span{
+    width: 100%;
+}
+
+
+/* services style */
+.services {
+    min-height: 70vh; 
+}
+
+.services .box-container {
+    border-top: var(--border);
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 2rem;
+
+}
+
+.services .box-container .box {
+    padding: 3rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.services .box-container .box i{
+    font-size: 4rem;
+    padding-bottom: 5rem;
+    color: #fff;
+}
+
+.services .box-container .box h3{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: var(--black);
+}
+
+.services .box-container .box p{
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--light-color);
+}
+
+.services .box-container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--green);
+    z-index: -1;
+    clip-path: circle(10rem at 7% 0%);
+    transition: .3s linear;
+}   
+
+.services .box-container .box:hover::before {
+    clip-path: circle(100%);
+}   
+
+.services .box-container .box:hover>*  {
+    color: #fff;
+}  
+
+.credits {
+    font-size:1.5rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 0;
+    border-top: var(--border);
+    color: var(--black);
+    letter-spacing: 2px;
+}
+
+.credits span {
+    color: var(--green);
+}
+
+
+/* media style */
+@media (max-width: 991px){
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        padding-left: 0;
+    }
+
+    .header {
+        left: -110%;
+        width: 100%;
+        border-right: 0;
+    }
+
+    .header.active {
+        left: 0%;
+        transition: .4s linear;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+}
+
+@media (max-width: 450px){
+    .home .content h3 {
+        font-size: 4rem;
+    }
+    
+    .home .content p {
+        font-size: 1rem;
+    }
+
+    .header .user h3 {
+        font-size: 2rem;
+    }
+    
+    .header .user p {
+        font-size: 1rem;
+    }
+
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        width: 100%;
+        border-right: 0;
+    }
+
+    .about .row .progress h3 {
+        font-size: 1.5rem;
+    }
+
+    .services .box-container .box i{
+        font-size: 3rem;
+    }
+
+    .services .box-container .box h3{
+        font-size: 1.5rem;
+    }
+
+    .services .box-container .box p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 300px){
+    .services .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    }
+    .home .content h3 {
+        font-size: 2rem;
+    }
+    
+    .home .content p {
+        font-size: .8rem;
+    }
+    .header .user h3 {
+        font-size: 2rem;
+    }
+    
+    .header .user p {
+        font-size: .8rem;
+    }
+
+    .about .row .conten h3 {
+        font-size: 1.5rem;
+    }
+
+    .about .row .progress h3 {
+        font-size: .2rem;
+    }
+    
+    .services .box-container .box i{
+        font-size: 2rem;
+    }
+
+    .services .box-container .box h3{
+        font-size: 1rem;
+    }
+
+    .services .box-container .box p{
+        font-size: 0.8rem;
+    }
+    
+}
